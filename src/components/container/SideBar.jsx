@@ -1,10 +1,17 @@
 import React from "react";
-import { SideBarWrapper, SideBarList } from "../styles.js";
+import {
+  SideBarWrapper,
+  SideBarList,
+  SubMenuTitle,
+  LastSubMenuTitle
+} from "../styles.js";
 
 export default function SideBar() {
   return (
     <SideBarWrapper>
-      <a href="#">Página Inicial</a>
+      <SubMenuTitle>
+        <a href="#">Pagina Inicial</a>
+      </SubMenuTitle>
       <SideBarList>
         <li>
           <a href="#">Abrir Fiscalização</a>
@@ -19,7 +26,9 @@ export default function SideBar() {
           <a href="#">Histórico de Alterações</a>
         </li>
       </SideBarList>
-      <a href="#">Sair</a>
+      <LastSubMenuTitle>
+        <a href="#">Sair</a>
+      </LastSubMenuTitle>
     </SideBarWrapper>
   );
 }

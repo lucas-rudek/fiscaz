@@ -40,6 +40,20 @@ export const SideBarWrapper = styled.div`
   width: 15vw;
 `;
 
+export const SubMenuTitle = styled.div`
+  a {
+    color: black;
+    text-decoration: none;
+  }
+`;
+
+export const LastSubMenuTitle = styled.a`
+  a {
+    color: black;
+    text-decoration: none;
+  }
+`;
+
 export const SideBarList = styled.ul`
   list-style: none;
   text-align: left;
