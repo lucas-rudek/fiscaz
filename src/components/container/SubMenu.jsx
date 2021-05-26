@@ -6,16 +6,25 @@ export default function SubMenu() {
     <SubMenuWrapper>
       <SubMenuList>
         <li>
-          <a href="#">Oportunidades</a>
+          <a href="#">Pesquisar</a>
         </li>
         <li>
-          <a href="#">Leilões</a>
+          <a href="#">Processo Licitatório</a>
         </li>
         <li>
-          <a href="#">Favoritos</a>
+          <a href="#">Dados da Fiscalização</a>
         </li>
         <li>
-          <a href="#">Conectar WhatsApp</a>
+          <a href="#">Documentos Fiscais</a>
+        </li>
+        <li>
+          <a href="#">Alterações Contratuais</a>
+        </li>
+        <li>
+          <a href="#">Medições</a>
+        </li>
+        <li>
+          <a href="#">Conclusão</a>
         </li>
       </SubMenuList>
     </SubMenuWrapper>

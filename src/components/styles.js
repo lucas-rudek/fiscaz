@@ -6,34 +6,24 @@ export const AppWrapper = styled.div`
 
 export const HeaderWrapper = styled.div`
   display: flex;
-  background-color: green;
+  background-color: gray;
   height: 50px;
-`;
-
-export const HeaderMenuWrapper = styled.div`
-  width: 20vw;
-  display: flex;
 
   p {
-    margin-left: 60px;
-  }
-
-  img {
-    width: 50px;
-    height: 50px;
+    margin: 15px;
   }
 `;
 
 export const HeaderInfoWrapper = styled.div`
-  background-color: blue;
-  width: 80vw;
+  background-color: gray;
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
 `;
 
 export const FooterWrapper = styled.div`
   width: 100%;
-  background-color: yellow;
+  background-color: #0f2f2a;
   height: 50px;
   display: flex;
   justify-content: flex-end;
@@ -46,8 +36,8 @@ export const ContainerWrapper = styled.div`
 `;
 
 export const SideBarWrapper = styled.div`
-  background-color: cyan;
-  width: 20vw;
+  background-color: #8f9284;
+  width: 15vw;
   text-align: center;
 
   li {
@@ -70,8 +60,8 @@ export const MainWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-content: start;
-  background-color: lightgrey;
-  width: 80vw;
+  background-color: #f3f3ef;
+  width: 85vw;
 `;
 
 export const MainTitle = styled.h1`
@@ -80,34 +70,19 @@ export const MainTitle = styled.h1`
   width: 100%;
 `;
 
-export const WidgetWrapper = styled.div`
-  margin: 2% 8% 2% 8%;
-  background-color: red;
-  width: 200px;
-  height: 300px;
-
-  p {
-    margin: 10px 10px 10px 10px;
-  }
-
-  img {
-    width: 200px;
-    height: 200px;
-  }
-`;
-
 export const SubMenuWrapper = styled.div`
   width: 100%;
   height: 50px;
-  background-color: orange;
+  background-color: #cbcbc3;
 
   li {
-    margin: 0px 70px 0px 70px;
+    margin: 0px 50px 0px 50px;
   }
 
   a {
     color: black;
     text-decoration: none;
+    white-space: nowrap;
   }
 `;
 

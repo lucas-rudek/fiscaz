@@ -6,22 +6,22 @@ export default function SideBar() {
     <SideBarWrapper>
       <SideBarList>
         <li>
-          <a href="#">Oportunidades de Negócio</a>
+          <a href="#">Página Inicial</a>
         </li>
         <li>
-          <a href="#">Postar Anúncio</a>
+          <a href="#">Abrir Fiscalização</a>
         </li>
         <li>
-          <a href="#">Controle de estoque e documentos</a>
+          <a href="#">Acompanhamento de Fiscalização</a>
         </li>
         <li>
-          <a href="#">Gerenciamento de Caixa</a>
+          <a href="#">Fiscalizações Concluídas</a>
         </li>
         <li>
-          <a href="#">Emitir Nota Fiscal</a>
+          <a href="#">Histórico de Alterações</a>
         </li>
         <li>
-          <a href="#">Suporte</a>
+          <a href="#">Sair</a>
         </li>
       </SideBarList>
     </SideBarWrapper>
