@@ -4,10 +4,8 @@ import { SideBarWrapper, SideBarList } from "../styles.js";
 export default function SideBar() {
   return (
     <SideBarWrapper>
+      <a href="#">Página Inicial</a>
       <SideBarList>
-        <li>
-          <a href="#">Página Inicial</a>
-        </li>
         <li>
           <a href="#">Abrir Fiscalização</a>
         </li>
@@ -20,10 +18,8 @@ export default function SideBar() {
         <li>
           <a href="#">Histórico de Alterações</a>
         </li>
-        <li>
-          <a href="#">Sair</a>
-        </li>
       </SideBarList>
+      <a href="#">Sair</a>
     </SideBarWrapper>
   );
 }

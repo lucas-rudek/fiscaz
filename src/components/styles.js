@@ -24,7 +24,7 @@ export const HeaderInfoWrapper = styled.div`
 export const FooterWrapper = styled.div`
   width: 100%;
   background-color: #0f2f2a;
-  height: 50px;
+  height: 30px;
   display: flex;
   justify-content: flex-end;
   align-content: center;
@@ -38,15 +38,6 @@ export const ContainerWrapper = styled.div`
 export const SideBarWrapper = styled.div`
   background-color: #8f9284;
   width: 15vw;
-  text-align: center;
-
-  li {
-    margin: 80px 0px 0px 10px;
-  }
-  a {
-    color: black;
-    text-decoration: none;
-  }
 `;
 
 export const SideBarList = styled.ul`
@@ -54,6 +45,14 @@ export const SideBarList = styled.ul`
   text-align: left;
   padding: 0;
   margin: 0;
+
+  li {
+    margin: 100px 10px 100px 10px;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
 `;
 
 export const MainWrapper = styled.div`
