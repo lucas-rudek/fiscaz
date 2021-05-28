@@ -45,13 +45,15 @@ export const SubMenuTitle = styled.div`
     color: black;
     text-decoration: none;
   }
+  margin: 20px 0px 0px 10px;
 `;
 
-export const LastSubMenuTitle = styled.a`
+export const LastSubMenuTitle = styled.div`
   a {
     color: black;
     text-decoration: none;
   }
+  margin: 450px 0px 0px 10px;
 `;
 
 export const SideBarList = styled.ul`
