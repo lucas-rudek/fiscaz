@@ -16,7 +16,7 @@ export const HeaderWrapper = styled.div`
 
 export const HeaderInfoWrapper = styled.div`
   background-color: gray;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 `;
@@ -103,4 +103,11 @@ export const SubMenuList = styled.ul`
   list-style: none;
   text-align: left;
   margin: 15px 0px 15px 0px;
+`;
+
+export const Teste = styled.div`
+  background-color: yellow;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 5% 0 5%;
 `;

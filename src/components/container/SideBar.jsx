@@ -19,7 +19,7 @@ export default function SideBar() {
       <SideBarList>
         <li>
           <DonutLargeIcon />
-          <a href="#">Abrir Fiscalização</a>
+          <a href="#">Nova Fiscalização</a>
         </li>
         <li>
           <DonutLargeIcon />
