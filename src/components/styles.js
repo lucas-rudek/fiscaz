@@ -105,7 +105,7 @@ export const SubMenuList = styled.ul`
   margin: 15px 0px 15px 0px;
 `;
 
-export const Teste = styled.div`
+export const MainInfoWrapper = styled.div`
   background-color: yellow;
   width: 100vw;
   height: 100vh;
