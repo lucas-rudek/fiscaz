@@ -38,21 +38,21 @@ export const ContainerWrapper = styled.div`
 export const SideBarWrapper = styled.div`
   background-color: #8f9284;
   width: 15vw;
-`;
-
-export const SubMenuTitle = styled.div`
   a {
+    margin: 3px 0px 0px 5px;
+    display: inline-block;
     color: black;
     text-decoration: none;
   }
+`;
+
+export const SideBarTittle = styled.div`
+  display: flex;
   margin: 20px 0px 0px 10px;
 `;
 
-export const LastSubMenuTitle = styled.div`
-  a {
-    color: black;
-    text-decoration: none;
-  }
+export const LastSideBarTittle = styled.div`
+  display: flex;
   margin: 450px 0px 0px 10px;
 `;
 
@@ -63,11 +63,8 @@ export const SideBarList = styled.ul`
   margin: 0;
 
   li {
+    display: flex;
     margin: 100px 10px 100px 10px;
-  }
-  a {
-    color: black;
-    text-decoration: none;
   }
 `;
 

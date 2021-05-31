@@ -2,33 +2,42 @@ import React from "react";
 import {
   SideBarWrapper,
   SideBarList,
-  SubMenuTitle,
-  LastSubMenuTitle
+  SideBarTittle,
+  LastSideBarTittle
 } from "../styles.js";
+import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+import DonutLargeIcon from "@material-ui/icons/DonutLarge";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 export default function SideBar() {
   return (
     <SideBarWrapper>
-      <SubMenuTitle>
+      <SideBarTittle>
+        <AccountBalanceIcon />
         <a href="#">Pagina Inicial</a>
-      </SubMenuTitle>
+      </SideBarTittle>
       <SideBarList>
         <li>
+          <DonutLargeIcon />
           <a href="#">Abrir Fiscalização</a>
         </li>
         <li>
+          <DonutLargeIcon />
           <a href="#">Acompanhamento de Fiscalização</a>
         </li>
         <li>
+          <DonutLargeIcon />
           <a href="#">Fiscalizações Concluídas</a>
         </li>
         <li>
+          <DonutLargeIcon />
           <a href="#">Histórico de Alterações</a>
         </li>
       </SideBarList>
-      <LastSubMenuTitle>
+      <LastSideBarTittle>
+        <ExitToAppIcon />
         <a href="#">Sair</a>
-      </LastSubMenuTitle>
+      </LastSideBarTittle>
     </SideBarWrapper>
   );
 }

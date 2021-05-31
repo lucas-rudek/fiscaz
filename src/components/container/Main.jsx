@@ -6,7 +6,7 @@ export default function Main() {
   return (
     <MainWrapper>
       <SubMenu />
-      <MainTitle />
+      <MainTitle>Olá Mundo</MainTitle>
     </MainWrapper>
   );
 }
