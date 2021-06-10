@@ -1,29 +1,34 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import SubMenu from "./SubMenu.jsx";
 import api from "../../services/api.js";
 import { MainWrapper, MainTitle, MainInfoWrapper } from "../styles.js";
 
-api
-  .get("usuarios")
-  .then((res) => console.log(res.data))
-  .catch((err) => {
-    console.error(err);
-  });
-
 export default function Main() {
+  const { register, handleSubmit } = useForm();
+
+  function salvaCadastro() {
+    api
+      .post("/usuarios")
+      .then((res) => console.log(res.data))
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+
   return (
     <MainWrapper>
       <SubMenu />
       <MainTitle>Abertura do Processo de Licitação</MainTitle>
       <MainInfoWrapper>
-        <form>
-          <label htmlFor="name">First name:</label>
+        <form onSubmit={handleSubmit(salvaCadastro)} action="/usuarios">
+          <label htmlFor="name">First Name:</label>
           <br />
-          <input type="text" id="name" name="name" />
+          <input type="text" {...register("name")} id="name" name="name" />
           <br />
-          <label htmlFor="surname">Last name:</label>
+          <label htmlFor="quote">Quote:</label>
           <br />
-          <input type="text" id="surname" name="surname" />
+          <input type="text" {...register("quote")} id="quote" name="quote" />
           <br />
           <button type="submit">Enviar</button>
         </form>
