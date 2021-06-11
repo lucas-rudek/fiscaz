@@ -7,9 +7,9 @@ import { MainWrapper, MainTitle, MainInfoWrapper } from "../styles.js";
 export default function Main() {
   const { register, handleSubmit } = useForm();
 
-  function salvaCadastro() {
-    api
-      .post("/usuarios")
+  async function salvaCadastro(res) {
+    await api
+      .post("/usuarios", res)
       .then((res) => console.log(res.data))
       .catch((err) => {
         console.error(err);
@@ -19,16 +19,16 @@ export default function Main() {
   return (
     <MainWrapper>
       <SubMenu />
-      <MainTitle>Abertura do Processo de Licitação</MainTitle>
+      <MainTitle>...</MainTitle>
       <MainInfoWrapper>
         <form onSubmit={handleSubmit(salvaCadastro)} action="/usuarios">
           <label htmlFor="name">First Name:</label>
           <br />
-          <input type="text" {...register("name")} id="name" name="name" />
+          <input type="text" {...register("name")} />
           <br />
           <label htmlFor="quote">Quote:</label>
           <br />
-          <input type="text" {...register("quote")} id="quote" name="quote" />
+          <input type="text" {...register("quote")} />
           <br />
           <button type="submit">Enviar</button>
         </form>
