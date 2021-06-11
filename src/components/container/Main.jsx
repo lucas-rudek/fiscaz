@@ -16,12 +16,21 @@ export default function Main() {
       });
   }
 
+  async function atualizaCadastro(res) {
+    await api
+      .post("/processos/update/:nome_empreendimento", res)
+      .then((res) => console.log(res.data))
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+
   return (
     <MainWrapper>
       <SubMenu />
-      <MainTitle>...</MainTitle>
+      <MainTitle>Abertura do Processo de Licitação</MainTitle>
       <MainInfoWrapper>
-        <form onSubmit={handleSubmit(salvaCadastro)} action="/usuarios">
+        <form onSubmit={handleSubmit(salvaCadastro)} action="/processos">
           <label htmlFor="nome_empreendimento">Nome do Empreendimento:</label>
           <br />
           <input type="text" {...register("nome_empreendimento")} />
@@ -43,6 +52,34 @@ export default function Main() {
           <input type="text" {...register("fiscal_substituto")} />
           <br />
           <button type="submit">Enviar</button>
+        </form>
+        <br />
+        <br />
+        <form
+          onSubmit={handleSubmit(atualizaCadastro)}
+          action="/processos/update/:nome_empreendimento"
+        >
+          <label htmlFor="nome_empreendimento">Nome do Empreendimento:</label>
+          <br />
+          <input type="text" {...register("nome_empreendimento")} />
+          <br />
+          <label htmlFor="valor_orcado">Valor Orçado:</label>
+          <br />
+          <input type="text" {...register("valor_orcado")} />
+          <br />
+          <label htmlFor="autor_projeto">Autor do Projeto:</label>
+          <br />
+          <input type="text" {...register("autor_projeto")} />
+          <br />
+          <label htmlFor="fiscal_indicado">Fiscal Indicado:</label>
+          <br />
+          <input type="text" {...register("fiscal_indicado")} />
+          <br />
+          <label htmlFor="fiscal_substituto">Fiscal Substituto:</label>
+          <br />
+          <input type="text" {...register("fiscal_substituto")} />
+          <br />
+          <button type="submit">Atualizar</button>
         </form>
       </MainInfoWrapper>
     </MainWrapper>
