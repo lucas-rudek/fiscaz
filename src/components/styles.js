@@ -4,7 +4,7 @@ export const AppWrapper = styled.div`
   font-family: sans-serif;
 `;
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.header`
   display: flex;
   background-color: gray;
   height: 50px;
@@ -14,7 +14,7 @@ export const HeaderWrapper = styled.div`
   }
 `;
 
-export const HeaderInfoWrapper = styled.div`
+export const HeaderInfoWrapper = styled.header`
   background-color: gray;
   width: 100%;
   display: flex;
