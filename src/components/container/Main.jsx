@@ -8,6 +8,7 @@ export default function Main() {
   const { register, handleSubmit } = useForm();
 
   async function salvaCadastro(res) {
+    console.log(res);
     await api
       .post("/processos", res)
       .then((res) => console.log(res.data))
@@ -24,6 +25,28 @@ export default function Main() {
         console.error(err);
       });
   }
+
+  /*async function deleteCadastro(res) {
+    await api
+      .post("/processos/delete/:nome_empreendimento", res)
+      .then((res) => console.log(res.data))
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+  
+  <form
+          onSubmit={handleSubmit(deleteCadastro)}
+          action="/processos/delete/:nome_empreendimento"
+        >
+          <label htmlFor="nome_empreendimento">Nome do Empreendimento:</label>
+          <br />
+          <input type="text" {...register("nome_empreendimento")} />
+          <br />
+          <button type="submit">Deletar</button>
+        </form>
+  
+  */
 
   return (
     <MainWrapper>
@@ -81,6 +104,8 @@ export default function Main() {
           <br />
           <button type="submit">Atualizar</button>
         </form>
+        <br />
+        <br />
       </MainInfoWrapper>
     </MainWrapper>
   );
