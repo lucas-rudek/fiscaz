@@ -8,45 +8,33 @@ export default function Main() {
   const { register, handleSubmit } = useForm();
 
   async function salvaCadastro(res) {
-    console.log(res);
     await api
-      .post("/processos", res)
+      .get("/processos", res)
       .then((res) => console.log(res.data))
       .catch((err) => {
         console.error(err);
       });
   }
 
+  //arrumar pra pegar por ID
   async function atualizaCadastro(res) {
     await api
-      .post("/processos/update/:nome_empreendimento", res)
+      .post("/processos/update/:atualiza_nome_empreendimento", res)
       .then((res) => console.log(res.data))
       .catch((err) => {
         console.error(err);
       });
   }
 
-  /*async function deleteCadastro(res) {
+  //arrumar para deletar pelo ID
+  async function deleteCadastro(res) {
     await api
-      .post("/processos/delete/:nome_empreendimento", res)
+      .post("/processos/delete/:delete_nome_empreendimento", res)
       .then((res) => console.log(res.data))
       .catch((err) => {
         console.error(err);
       });
   }
-  
-  <form
-          onSubmit={handleSubmit(deleteCadastro)}
-          action="/processos/delete/:nome_empreendimento"
-        >
-          <label htmlFor="nome_empreendimento">Nome do Empreendimento:</label>
-          <br />
-          <input type="text" {...register("nome_empreendimento")} />
-          <br />
-          <button type="submit">Deletar</button>
-        </form>
-  
-  */
 
   return (
     <MainWrapper>
@@ -77,35 +65,49 @@ export default function Main() {
           <button type="submit">Enviar</button>
         </form>
         <br />
-        <br />
+
         <form
           onSubmit={handleSubmit(atualizaCadastro)}
-          action="/processos/update/:nome_empreendimento"
+          action="/processos/update/:atualiza_nome_empreendimento"
         >
-          <label htmlFor="nome_empreendimento">Nome do Empreendimento:</label>
+          <label htmlFor="atualiza_nome_empreendimento">
+            Nome do Empreendimento:
+          </label>
           <br />
-          <input type="text" {...register("nome_empreendimento")} />
+          <input type="text" {...register("atualiza_nome_empreendimento")} />
           <br />
-          <label htmlFor="valor_orcado">Valor Orçado:</label>
+          <label htmlFor="atualiza_valor_orcado">Valor Orçado:</label>
           <br />
-          <input type="text" {...register("valor_orcado")} />
+          <input type="text" {...register("atualiza_valor_orcado")} />
           <br />
-          <label htmlFor="autor_projeto">Autor do Projeto:</label>
+          <label htmlFor="atualiza_autor_projeto">Autor do Projeto:</label>
           <br />
-          <input type="text" {...register("autor_projeto")} />
+          <input type="text" {...register("atualiza_autor_projeto")} />
           <br />
-          <label htmlFor="fiscal_indicado">Fiscal Indicado:</label>
+          <label htmlFor="atualiza_fiscal_indicado">Fiscal Indicado:</label>
           <br />
-          <input type="text" {...register("fiscal_indicado")} />
+          <input type="text" {...register("atualiza_fiscal_indicado")} />
           <br />
-          <label htmlFor="fiscal_substituto">Fiscal Substituto:</label>
+          <label htmlFor="atualiza_fiscal_substituto">Fiscal Substituto:</label>
           <br />
-          <input type="text" {...register("fiscal_substituto")} />
+          <input type="text" {...register("atualiza_fiscal_substituto")} />
+          <br />
           <br />
           <button type="submit">Atualizar</button>
         </form>
         <br />
-        <br />
+        <form
+          onSubmit={handleSubmit(deleteCadastro)}
+          action="/processos/delete/:delete_nome_empreendimento"
+        >
+          <label htmlFor="delete_nome_empreendimento">
+            Nome do Empreendimento:
+          </label>
+          <br />
+          <input type="text" {...register("delete_nome_empreendimento")} />
+          <br />
+          <button type="submit">Deletar</button>
+        </form>
       </MainInfoWrapper>
     </MainWrapper>
   );
