@@ -7,9 +7,18 @@ import { MainWrapper, MainTitle, MainInfoWrapper } from "../styles.js";
 export default function Main() {
   const { register, handleSubmit } = useForm();
 
-  async function salvaCadastro(res) {
+  async function getCadastro(res) {
     await api
       .get("/processos", res)
+      .then((res) => console.log(res.data))
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+
+  async function salvaCadastro(res) {
+    await api
+      .post("/processos", res)
       .then((res) => console.log(res.data))
       .catch((err) => {
         console.error(err);
@@ -65,7 +74,6 @@ export default function Main() {
           <button type="submit">Enviar</button>
         </form>
         <br />
-
         <form
           onSubmit={handleSubmit(atualizaCadastro)}
           action="/processos/update/:atualiza_nome_empreendimento"
@@ -92,7 +100,6 @@ export default function Main() {
           <br />
           <input type="text" {...register("atualiza_fiscal_substituto")} />
           <br />
-          <br />
           <button type="submit">Atualizar</button>
         </form>
         <br />
@@ -108,6 +115,7 @@ export default function Main() {
           <br />
           <button type="submit">Deletar</button>
         </form>
+        <input type="button" value="Get" onClick={handleSubmit(getCadastro)} />
       </MainInfoWrapper>
     </MainWrapper>
   );

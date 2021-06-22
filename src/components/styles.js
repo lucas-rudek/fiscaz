@@ -106,8 +106,14 @@ export const SubMenuList = styled.ul`
 `;
 
 export const MainInfoWrapper = styled.div`
+  display: flex;
   background-color: yellow;
   width: 100vw;
   height: 100vh;
   margin: 0 5% 0 5%;
+
+  input[type="button"] {
+    width: 100px;
+    height: 30px;
+  }
 `;
