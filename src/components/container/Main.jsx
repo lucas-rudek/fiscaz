@@ -35,7 +35,6 @@ export default function Main() {
       });
   }
 
-  //arrumar para deletar pelo ID
   async function deleteCadastro(res) {
     await api
       .post("/processos/delete/:delete_nome_empreendimento", res)
@@ -44,7 +43,8 @@ export default function Main() {
         console.error(err);
       });
   }
-
+  //arrumar bug fos forms que enviam toda info mesmo quando n precisa,
+  //ver sobre useState
   return (
     <MainWrapper>
       <SubMenu />
