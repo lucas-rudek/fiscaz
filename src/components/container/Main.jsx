@@ -25,7 +25,6 @@ export default function Main() {
       });
   }
 
-  //arrumar pra pegar por ID
   async function atualizaCadastro(res) {
     await api
       .post("/processos/update/:atualiza_nome_empreendimento", res)
@@ -43,7 +42,7 @@ export default function Main() {
         console.error(err);
       });
   }
-  //arrumar bug fos forms que enviam toda info mesmo quando n precisa,
+  //arrumar bug dos forms que enviam toda info mesmo quando n precisa,
   //ver sobre useState
   return (
     <MainWrapper>
